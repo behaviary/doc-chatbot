@@ -33,6 +33,7 @@ export default async function handler(
       '.pdf': (path) => new PDFLoader(path),
       '.docx': (path) => new DocxLoader(path),
       '.txt': (path) => new TextLoader(path),
+      '.md': (path) => new TextLoader(path),
     });
 
     const rawDocs = await directoryLoader.load();
